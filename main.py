@@ -1,7 +1,5 @@
 from random import *
 from tkinter import *
-import string
-from random import *
 
 
 #generation of random mdp 
@@ -21,14 +19,14 @@ def generate_pass():
 
 #generation of random email
 def generate_email():
-    generate_min = 4
-    generate_max = 16
-    mail = "@gmail.com"
+    generate_min = 8
+    generate_max = 12
+    gmail = "@gmail.com"
     all_chars = string.ascii_letters + string.digits
     email = "".join(choice(all_chars)
                     for x in range(randint(generate_min, generate_max)))
     for z in email :
-        email += mail 
+        email += gmail 
         break
     email_entry.delete(0, END)
     email_entry.insert(0, email)
